@@ -15,7 +15,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
-    private H264Player h264Player;
+    private H264Player2 h264Player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         surfaceHolder.addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(@NonNull SurfaceHolder holder) {
-                h264Player = new H264Player(MainActivity.this,
+                h264Player = new H264Player2(MainActivity.this,
                         new File(Environment.getExternalStorageDirectory(), "mame.h264").getAbsolutePath(),
                         surfaceHolder.getSurface());
                 h264Player.play();
