@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 
 import java.io.File;
 
@@ -59,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    public void onProjectionClick(View view) {
+        startActivity(new Intent(this, ProjectionActivity.class));
 
     }
 }

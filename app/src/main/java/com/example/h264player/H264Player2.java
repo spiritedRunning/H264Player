@@ -76,7 +76,7 @@ public class H264Player2 implements Runnable {
             if (totalSize == 0 || startIndex >= totalSize) {
                 break;
             }
-            // startIndex + 2 用于跳过sps/pps, 因为无法解析出图片.
+            // startIndex + 2 用于跳过最开始的sps, 否则无法解析出图片.
             int nextFrameStart = findByFrame(bytes, startIndex + 2, totalSize);
 
             MediaCodec.BufferInfo info = new MediaCodec.BufferInfo();
